@@ -101,5 +101,7 @@ ul{
 }
 
 main {
-  overflow-x: clip;
+  overflow-x: clip; /*on dit à "main" qu'il doit découper ce qui dépasse visuellement pour éviter de scroll horizontalement
+                    -x: sur l'axe x donc gauche et droite
+                    clip : coupe l'affichage à la limite de main */
 }
