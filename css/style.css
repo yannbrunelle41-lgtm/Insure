@@ -1,0 +1,105 @@
+html {
+    font-size: 62.5%;;
+}
+
+body {
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.networklink {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+/* karla-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/karla-v33-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* karla-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/karla-v33-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* dm-serif-display-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/dm-serif-display-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+body{
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1, .titre1{
+    font-family: 'DM Serif Display';
+    font-weight: 400;
+    font-size: 4.8rem;
+    
+}
+
+h1 {
+  position: relative;
+    z-index: 1;
+}
+
+.container1{
+  position: relative; /* pour qu'il devienne le repère des enfant du contenaires qui seront en position: absolute */
+  background-color: #2D2641;
+  color: #FFFFFF;
+  padding-top: 9.3rem;
+  padding-bottom: 9.3rem;
+  padding-inline: 2.4rem;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+
+}
+.icone {
+  margin-inline: auto; /* pour que les icones soient centrées sur la page en responsive */
+}
+
+.family-picture {
+  width: 100%; /* pour qu'elle prenne la largeur max */
+  max-width: 54rem; /* j'ai regardé la version desktop et la largeur était de 540px */
+  height: auto; /* le but était de respecter les proportions */
+  z-index: 1; /* pour placer la phto de famille au plan supérieur pour qu'elle cache les lignes de topo1 */
+  position: relative;
+}
+
+.topo1 {
+  position: absolute; /*enlève l'image du flux pour ne pas prendre la place du texte*/
+  max-width: none;
+  left: -25.8rem; /* option+pointeur sur figma pour calculer la position de topo1 */
+  top: -28rem;
+  z-index: 0; /* pour placer l'image topo1 derrière la photo de famille grâce à la propriété z-index: 1 de la photo de famille */
+}
+
+.topo2 { /* j'ai reproduit les propriétés de topo1 en changeant sa position gra^ce aux valeurs de figma */
+  position: absolute;
+  max-width: none;
+  left: 25.2rem;
+  top: 34.6rem;
+  z-index: 0;
+}
+
+main {
+  overflow-x: clip;
+}

@@ -1,0 +1,29 @@
+# ==================================
+# INSURE - Configuration Git
+# ==================================
+
+# Fichiers système macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Fichiers temporaires
+*.log
+*.tmp
+*.temp
+*.swp
+*~
+
+# Configuration personnelle des IDE
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Variables d'environnement et secrets
+.env
+.env.*
+!.env.example
+
+# Dépendances éventuelles
+node_modules/
