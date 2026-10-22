@@ -84,22 +84,6 @@ ul{
   position: relative;
 }
 
-.topo1 {
-  position: absolute; /*enlève l'image du flux pour ne pas prendre la place du texte*/
-  max-width: none;
-  left: -25.8rem; /* option+pointeur sur figma pour calculer la position de topo1 */
-  top: -28rem;
-  z-index: 0; /* pour placer l'image topo1 derrière la photo de famille grâce à la propriété z-index: 1 de la photo de famille */
-}
-
-.topo2 { /* j'ai reproduit les propriétés de topo1 en changeant sa position gra^ce aux valeurs de figma */
-  position: absolute;
-  max-width: none;
-  left: 25.2rem;
-  top: 34.6rem;
-  z-index: 0;
-}
-
 main {
   overflow-x: clip; /*on dit à "main" qu'il doit découper ce qui dépasse visuellement pour éviter de scroll horizontalement
                     -x: sur l'axe x donc gauche et droite
@@ -110,3 +94,27 @@ main {
   position: relative;
   z-index: 1;
 }
+
+.container1::before {
+  content: ""; /* pour enlever le contenu textuel de l'élément */
+  position: absolute;
+  background-image: url(/img/topo1.svg); /* on ajoute cette image en background de l'élement before */
+  background-repeat: no-repeat; /* comme l'image est plus petite que l'espace disponible on évite le repeat du motif */
+  width: 48.5rem;
+  height: 45.3rem;
+  left: -25.8rem;
+  top: -28rem;
+
+}
+
+.container1::after {
+  content: "";
+  position: absolute;
+  background-image: url(/img/topo2.svg);
+  background-repeat: no-repeat;
+  width: 37.7rem;
+  height: 35.2rem;
+  left: 25.2rem;
+  top: 34.6rem;
+}
+
