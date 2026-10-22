@@ -38,6 +38,11 @@ body {
   font-weight: 400;
   src: url('../fonts/dm-serif-display-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+h3 {
+  font-family: 'DM Serif Display';
+  font-weight: 400;
+  font-size: 2.8rem;
+}
 
 body{
   font-family: 'Karla';
@@ -55,7 +60,10 @@ h1, .titre1{
 h1 {
   position: relative;
     z-index: 1;
+  line-height: 4.8rem;
 }
+
+
 
 .container1{
   position: relative; /* pour qu'il devienne le repère des enfant du contenaires qui seront en position: absolute */
@@ -138,11 +146,12 @@ header {
   justify-content: space-between; /* permet de mettre de l'espace entre les deux éléments et par extension les placer sur les extrémités */
   align-items: center;
   padding: 2.4rem; /* marge de 24px sur figma appliqué au menu burger. Grâce à align-items, les éléments sont alignés sur l'axe X */
+  position: relative;
+  z-index: 2;
 }
 
-#menu { /* le # permet de rappeler l'élément avec un id précis */
-  display: none;
-}
+
+
 
 .burger-menu span {
   display: block;
@@ -163,10 +172,10 @@ header {
 
   }
 
-  .burger-menu span::before {
+  .burger-menu span::before { /*création d'un trait supérieur au span*/
     top: -0.35rem;
   }
-  .burger-menu span::after {
+  .burger-menu span::after { /*création d'un trait inférieur au span*/
     top: 0.35rem;
   }
 
@@ -180,5 +189,51 @@ header {
   width: 15rem;
   height: 0.1rem;
   background-color: #C396C6;
+  margin-inline: auto;
+}
+
+.container2 {
+  margin-top: 14rem;
+}
+
+.titre1 {
+  margin-top: 4rem;
+}
+
+.container1 h1 {
+  margin-bottom: 1.6rem;
+}
+
+.container1 .main-text {
+  margin-bottom: 3.2rem;
+}
+
+.burger-menu[aria-expanded="true"] span { /* .burger-menu[aria-expanded="true"] cilbe le bouton quand le menu est ouvert*/
+    background-color: transparent;        /* cible uniquement le span à l'intérieur du bouton */
+}                                         /* fait disparaitre le trait du milieu qui correspond au span en le rendant transparent */
+
+.burger-menu[aria-expanded="true"] span::before { /* on cible le pseudo élément span before quand le menu burger est ouvert*/
+    top: 0; /* on replace l'élement au centre du menu burger */
+    transform: rotate(45deg);  /* on applique une rotation de 45° pour créer une partie de la croix */
+}
+
+.burger-menu[aria-expanded="true"] span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #2C2830;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #FFFFFF;
+
 }
 
