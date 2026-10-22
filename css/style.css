@@ -40,7 +40,6 @@ body {
 }
 
 body{
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
@@ -68,8 +67,8 @@ h1 {
 }
 
 ul{
-  list-style: none;
-  padding: 0;
+  list-style: none; /* enelève les puves */
+  padding: 0; /* dans ce cas permet de centrer sur le navigateur la liste */
 
 }
 .icone {
@@ -97,10 +96,10 @@ main {
 
 .container1::before {
   content: ""; /* pour enlever le contenu textuel de l'élément */
-  position: absolute;
+  position: absolute; /* permet de ne pas dépendre des autres éléments et de le placer librement */
   background-image: url(/img/topo1.svg); /* on ajoute cette image en background de l'élement before */
   background-repeat: no-repeat; /* comme l'image est plus petite que l'espace disponible on évite le repeat du motif */
-  width: 48.5rem;
+  width: 48.5rem; 
   height: 45.3rem;
   left: -25.8rem;
   top: -28rem;
@@ -114,7 +113,72 @@ main {
   background-repeat: no-repeat;
   width: 37.7rem;
   height: 35.2rem;
-  left: 25.2rem;
+  right: -25.2rem;
   top: 34.6rem;
+}
+
+.view1 {
+  border: #FFFFFF solid 0.15rem;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding-inline: 2.85rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1.2rem;
+}
+
+.burger-menu {
+  border: #2D2641 solid 0.15rem;
+  background-color: transparent;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+header {
+  display: flex; /* pour qu'ils soient sur la même ligne */
+  justify-content: space-between; /* permet de mettre de l'espace entre les deux éléments et par extension les placer sur les extrémités */
+  align-items: center;
+  padding: 2.4rem; /* marge de 24px sur figma appliqué au menu burger. Grâce à align-items, les éléments sont alignés sur l'axe X */
+}
+
+#menu { /* le # permet de rappeler l'élément avec un id précis */
+  display: none;
+}
+
+.burger-menu span {
+  display: block;
+  width: 1.6rem;
+  height: 0.15rem;
+  background-color: #2C2830;
+  position: relative;
+  }
+
+  .burger-menu span::before,
+  .burger-menu span::after {
+    content: "";
+    position: absolute;
+    width: 1.6rem;
+    height: 0.15rem;
+    background-color: #2C2830;
+    left: 0;
+
+  }
+
+  .burger-menu span::before {
+    top: -0.35rem;
+  }
+  .burger-menu span::after {
+    top: 0.35rem;
+  }
+
+.burger-menu.open span {
+    background-color: transparent;
+}
+
+.container2::before {
+  display: block;
+  content: "";
+  width: 15rem;
+  height: 0.1rem;
+  background-color: #C396C6;
 }
 
