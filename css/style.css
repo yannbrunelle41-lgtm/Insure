@@ -105,3 +105,8 @@ main {
                     -x: sur l'axe x donc gauche et droite
                     clip : coupe l'affichage à la limite de main */
 }
+
+.main-text {
+  position: relative;
+  z-index: 1;
+}
