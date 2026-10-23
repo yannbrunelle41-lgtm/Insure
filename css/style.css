@@ -229,11 +229,21 @@ header {
   width: 100%;
   margin: 0;
   background-color: #2C2830;
+  margin-block: ;
 }
 
 #menu a {
+    display: block;
     text-decoration: none;
     color: #FFFFFF;
+    line-height: 4rem;
+    margin-inline: 2.4rem;
 
 }
+
+#menu a:hover {
+  outline: 0.15rem solid #FFFFFF;
+
+}
+
 
