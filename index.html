@@ -45,13 +45,21 @@
 		<a href="index.html">
 			<img src="img/logoinsure.svg" alt="logo">
 		</a>
+		
+		<button 
+			class="burger-menu" 
+			type="button"
+			aria-controls="menu"
+			aria-expanded="false"
+			aria-label="Ouvrir le menu">
+		</button>
 
 		<nav role="navigation" aria-label="primary">
-			<ul id="menu">
+			<ul id="menu" data-visible="false"> <!-- data : préfixe permettant de créer un attribut personnalisé - visible : non que j'ai choisis pour l'attribut - false : valeur indiquant que le menu est initialement fermé -->
 				<li><a href="#apropos.html">HOW WE WORK</a></li>
 				<li><a href="#blog.html">BLOG</a></li>
 				<li><a href="#account.html">ACCOUNT</a></li>
-				<li><a href="#plans.html">VIEW PLANS</a></li>
+				<li><a class="cta-viewplans" href="#plans.html">VIEW PLANS</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -192,6 +200,8 @@
 	</footer>
 
 	</main>
+
+<script src="js/nav.js" defer></script>
 
 </body>
 </html>

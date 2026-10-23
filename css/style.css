@@ -41,6 +41,7 @@ body {
   src: url('../fonts/dm-serif-display-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+
 h3 {
   font-family: 'DM Serif Display';
   font-weight: 400;
@@ -165,4 +166,76 @@ header {
 
 .container1 .main-text {
   margin-bottom: 3.2rem;
+}
+
+.burger-menu {
+  background-image: url(/img/menu-burger-close.svg);
+  width: 3.2rem;
+  height: 3.2rem;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+}
+
+#menu {
+  background-color: #2C2830;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transform: translateX(100%);
+  transition: transform 350ms ease-out;
+  padding-inline: 2.4rem;
+  margin-top: 0;
+  padding-top: 2.4rem;
+  height: 58.4rem;
+  overflow-x: clip;
+  overflow-y: clip;
+}
+
+#menu[data-visible="true"] {
+  transform: translateX(0);
+}
+
+.burger-menu[aria-expanded="true"] {
+  background-image: url("/img/menu-burger-open.svg");
+}
+
+#menu a {
+  display: block;
+  border: solid 0.15rem transparent;
+  line-height: 4rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.7rem 0 0.6rem 0;
+
+}
+
+#menu .cta-viewplans {
+  border-color: #FFFFFF;
+  font-weight: 700;
+}
+
+#menu li {
+  margin-bottom: 0.8rem;
+}
+
+#menu li:nth-child(3) { /* #menu li:nth-child(3) sert à cibler le 3ème enfant. Dans figma j'avais des marges différentes entre les 3 premiers liens et entre le 3 et 4 */
+  margin-bottom: 1.6rem;
+}
+
+#menu a:active {
+  border-color: #FFFFFF;
+}
+
+#menu::after {
+  content: "";
+  position: absolute;
+  background-image: url(/img/topo-burger.svg);
+  background-repeat: no-repeat;
+  width: 88.1rem;
+  height: 82.1rem;
+  top: 36.9rem;
+  left: -12.1rem;
 }
