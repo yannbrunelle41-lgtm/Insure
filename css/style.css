@@ -1,11 +1,15 @@
 
 html {
-    font-size: 62.5%;;
+  font-size: 62.5%;
 }
 
 body {
-    font-size: 16px;
-    text-align: center;
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  overflow-x: clip;
 }
 
 .networklink {
@@ -49,11 +53,6 @@ h3 {
   font-size: 2.8rem;
 }
 
-body{
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 400;
-}
 
 h1, .titre1{
     font-family: 'DM Serif Display';
@@ -79,6 +78,7 @@ h1 {
 ul{
   list-style: none; /* enelève les puves */
   padding: 0; /* dans ce cas permet de centrer sur le navigateur la liste */
+  margin: 0;
 }
 
 .icone {
@@ -91,6 +91,7 @@ ul{
   height: auto; /* le but était de respecter les proportions */
   z-index: 1; /* pour placer la phto de famille au plan supérieur pour qu'elle cache les lignes de topo1 */
   position: relative;
+  margin-inline: auto;
 }
 
 main {
@@ -113,7 +114,9 @@ main {
   height: 45.3rem;
   left: -25.8rem;
   top: -28rem;
+  clip-path: inset(28rem 0 0 0); /* permet de découper le motif topo1 sans toucher à topo2. clip-path: inset(haut droite bas gauche)  */
 }
+
 
 .container1::after {
   content: "";
@@ -155,6 +158,14 @@ header {
 
 .container2 {
   margin-top: 14rem;
+  margin-inline: 2.4rem;
+}
+
+.container2 h2 {
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+  letter-spacing: -0.067rem;
+  margin-bottom: 8rem;
 }
 
 .titre1 {
@@ -163,6 +174,9 @@ header {
 
 .container1 h1 {
   margin-bottom: 1.6rem;
+  line-height: 4.8rem;
+  letter-spacing: -0.067rem;
+  font-weight: 400;
 }
 
 .container1 .main-text {
@@ -241,22 +255,124 @@ header {
   left: -12.1rem;
 }
 
-.ante-footer {
-  background-color: #2D2641;
-  height: 34.4rem;
-  width: 100%;
-  margin: 2.4rem;
-  padding-top: 7.2rem;
+.container2 h3 {
+  margin-top: 3.2rem;
+  margin-bottom: 1.6rem;
 }
 
-.ante-footer h2 {
+.container2 p {
+  margin-bottom: 5.6rem;
+  line-height: 2.6rem;
+  color: #837D88;
+}
+
+.container2 li:last-child p {
+  margin-bottom: 14rem;
+}
+
+.container3 {
+  position: relative;
+  background-color: #2D2641;
+  padding-inline: 2.4rem;
+  padding-block: 7.2rem;
+  overflow-y: clip;
+  margin-bottom: 14rem;
+}
+
+.container3 h2 {
   font-family: 'DM Serif Display';
-  font-size: 4rem;
+  color: #FFFFFF;
   font-weight: 400;
   line-height: 4rem;
+  font-size: 4rem;
+  letter-spacing: -0.067rem;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
 }
 
-.ante-footer a {
-  display: block;
-  border: solid 0.15rem #FFFFFF;
+.container3 .view1 {
+  position: relative;
+  display: inline-block; /*comme a est un élément in-line, son padding vertical n'augmente pas sa place dans le flux. Cette propriété permet de les prendre en compte */
+  z-index: 1;
+}
+
+.container3::before {
+  content: "";
+  position: absolute;
+  background-image: url(/img/topo3.svg);
+  background-repeat: no-repeat;
+  width: 46.7rem;
+  height: 43.5rem;
+  top: -11.2rem;
+  right: -29.2rem;
+  z-index: 0;
+}
+
+footer {
+  position: relative;
+  background-color: #FAFAFA;
+  padding-top: 8.8rem;
+  padding-bottom: 8.8rem;
+  overflow-y: clip;
+}
+
+.top-footer .link-accueil {
+  display: inline-block;
+  margin-bottom: 3.2rem;
+}
+
+
+.top-footer {
+  position: relative;
+  margin-inline: 2.4rem;
+  border-bottom: 0.15rem solid #979797;
+  padding-bottom: 4rem;
+  z-index: 1;
+}
+
+.nav-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-footer p {
+  margin-bottom: 3.6rem;
+  margin-top: 4rem;
+  font-weight: 700;
+  color: #837D88;
+  font-family: 'Karla';
+  letter-spacing: 0.15rem;
+  font-size: 1.3rem;
+  
+}
+
+.nav-footer ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+
+}
+
+.nav-footer li {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+}
+
+.nav-footer a {
+   color: #2D2641;
+   text-decoration: none;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  background-image: url(/img/topo-footer.svg);
+  background-repeat: no-repeat;
+  width: 69.7rem;
+  height: 64.9rem;
+  top: -47.7rem;
+  left: -28.3rem;
+  z-index: 0;
 }
