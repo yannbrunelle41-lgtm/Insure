@@ -108,7 +108,7 @@ main {
 .container1::before {
   content: ""; /* pour enlever le contenu textuel de l'élément */
   position: absolute; /* permet de ne pas dépendre des autres éléments et de le placer librement */
-  background-image: url(/img/topo1.svg); /* on ajoute cette image en background de l'élement before */
+  background-image: url(../img/topo1.svg); /* on ajoute cette image en background de l'élement before */
   background-repeat: no-repeat; /* comme l'image est plus petite que l'espace disponible on évite le repeat du motif */
   width: 48.5rem;
   height: 45.3rem;
@@ -121,7 +121,7 @@ main {
 .container1::after {
   content: "";
   position: absolute;
-  background-image: url(/img/topo2.svg);
+  background-image: url(../img/topo2.svg);
   background-repeat: no-repeat;
   width: 37.7rem;
   height: 35.2rem;
@@ -184,7 +184,7 @@ header {
 }
 
 .burger-menu {
-  background-image: url(/img/menu-burger-close.svg);
+  background-image: url(../img/menu-burger-close.svg);
   width: 3.2rem;
   height: 3.2rem;
   background-position: center;
@@ -214,7 +214,7 @@ header {
 }
 
 .burger-menu[aria-expanded="true"] {
-  background-image: url("/img/menu-burger-open.svg");
+  background-image: url("../img/menu-burger-open.svg");
 }
 
 #menu a {
@@ -247,7 +247,7 @@ header {
 #menu::after {
   content: "";
   position: absolute;
-  background-image: url(/img/topo-burger.svg);
+  background-image: url(../img/topo-burger.svg);
   background-repeat: no-repeat;
   width: 88.1rem;
   height: 82.1rem;
@@ -300,7 +300,7 @@ header {
 .container3::before {
   content: "";
   position: absolute;
-  background-image: url(/img/topo3.svg);
+  background-image: url(../img/topo3.svg);
   background-repeat: no-repeat;
   width: 46.7rem;
   height: 43.5rem;
@@ -368,7 +368,7 @@ footer {
 footer::before {
   content: "";
   position: absolute;
-  background-image: url(/img/topo-footer.svg);
+  background-image: url(../img/topo-footer.svg);
   background-repeat: no-repeat;
   width: 69.7rem;
   height: 64.9rem;
