@@ -76,7 +76,7 @@ h1 {
 }
 
 ul{
-  list-style: none; /* enelève les puves */
+  list-style: none; /* enelève les puces */
   padding: 0; /* dans ce cas permet de centrer sur le navigateur la liste */
   margin: 0;
 }
@@ -224,6 +224,7 @@ header {
   color: #FFFFFF;
   text-decoration: none;
   padding: 0.7rem 0 0.6rem 0;
+  letter-spacing: 0.136rem;
 
 }
 
@@ -375,4 +376,51 @@ footer::before {
   top: -47.7rem;
   left: -28.3rem;
   z-index: 0;
+}
+
+@media (min-width: 1024px) {
+  
+.burger-menu {
+  display: none;
+}
+
+#menu {
+  transform: translateX(0%);
+  position: relative;
+  width: auto;
+  height: auto;
+  background-color: transparent; 
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 2.5rem;
+  align-items: center;
+  top: 0;
+  
+}
+
+#menu a {
+  color: #837D88;
+  padding-block: 0;
+  line-height: normal;
+}
+
+#menu > *, #menu li:nth-child(3) {
+  margin: 0;
+  padding: 0;
+  
+}
+#menu .cta-viewplans {
+  border-color: #2C2830;
+  padding-inline: 2.85rem;
+  padding-block: 1.3rem;
+  letter-spacing: 0.15rem;
+}
+header {
+  height: 8rem;
+}
+
+#menu li {
+  margin-bottom: 0;
+}
 }
