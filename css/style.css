@@ -130,9 +130,11 @@ main {
 }
 
 .view1 {
+  display: block;
   border: #FFFFFF solid 0.15rem;
   text-decoration: none;
   color: #FFFFFF;
+
   padding-inline: 2.85rem;
   padding-top: 1.3rem;
   padding-bottom: 1.2rem;
@@ -425,6 +427,37 @@ header {
 }
 
 .container1::before {
+  display: none;/* permet de découper le motif topo1 sans toucher à topo2. clip-path: inset(haut droite bas gauche)  */
+}
+
+.container1 {
+  position: relative;
+  text-align: left;
+  background-color: transparent;
+  flex-basis: 50%;
+  padding: 0;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  background-color: #2D2641;
+  padding-inline: 16.5rem;
+  padding-top: 10.5rem;
+}
+
+.family-picture {
+  margin-inline: 0;
+}
+
+.hero .family {
+  position: relative;
+  flex-basis: 50%;
+  margin-left: 1.5rem;
+}
+
+.hero::before {
   content: ""; /* pour enlever le contenu textuel de l'élément */
   position: absolute; /* permet de ne pas dépendre des autres éléments et de le placer librement */
   background-image: url(../img/topo1.svg); /* on ajoute cette image en background de l'élement before */
@@ -432,13 +465,38 @@ header {
   width: 69.7rem;
   height: 64.9rem;
   right: -38.7rem;
-  left: auto;
-  top: -13.7rem;
-  clip-path: none; /* permet de découper le motif topo1 sans toucher à topo2. clip-path: inset(haut droite bas gauche)  */
+  
 }
 
-.container1 {
-  overflow-y: clip;
+.container1::before {
+  content: "";
+  display: block;
+  position: relative;
+  background-color: #979797;
+  width: 15rem;
+  height: 0.1rem;
+  clip-path: none;
+  top: 0;
+  left:0;
+  margin-bottom: 6.3rem;
+
+}
+
+.container1 h1 {
+  font-size: 7.2rem;
+  line-height: 6.4rem;
+  letter-spacing: -0.1rem;
+  margin-bottom: 1.6rem;
+}
+
+.container1 p {
+  margin-bottom: 2.4rem;
+}
+
+.view1 {
+  width: 14.6rem;
+  height: 4rem;
+  padding-inline: 2.85rem;
 }
 
 }
