@@ -283,6 +283,7 @@ header {
   padding-inline: 2.4rem;
   padding-block: 7.2rem;
   overflow-y: clip;
+  overflow-x: clip;
   margin-bottom: 14rem;
   margin-inline: 2.4rem;
 }
