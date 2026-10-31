@@ -296,6 +296,7 @@ header {
   position: relative;
   display: inline-block; /*comme a est un élément in-line, son padding vertical n'augmente pas sa place dans le flux. Cette propriété permet de les prendre en compte */
   z-index: 1;
+  letter-spacing: 0.15rem;
 }
 
 .container3::before {
@@ -514,12 +515,64 @@ footer::before {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-inline: 0;
+    padding-inline: 16.5rem;
   }
 
   .container2 ul {
     display: flex;
     flex-direction: row;
     text-align: left;    
+    gap: 3rem;
   }
 
+  .container2::before {
+    margin-left: 0;
+    margin-bottom: 6.3rem;
+  }
+
+  .container2 h2 {
+    font-size: 7.2rem;
+    line-height: 6.4rem;
+    letter-spacing: -0.1rem;
+  }
+
+  .icone {
+    margin-inline: 0;
+  }
+
+  .titre1 {
+    margin-bottom: 9.6rem;
+  }
+
+  .container3::before {
+    width: 76.5rem;
+    height: 71.3rem;
+    background-size: contain;
+    top: -21.9rem;
+    right: -33.2rem;
+  }
+
+  .container3 {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 8rem;
+    margin-inline: 16.5rem;
+    overflow-x: clip;
+    align-items: center;
+    padding-block: 6.9rem;
+  }
+
+  .container3 h2 {
+    text-align: left;
+    font-size: 5.6rem;
+    line-height: 5.6rem;
+    letter-spacing: -0.078rem;
+    margin-bottom: 0;
+  }
+
+  .container3 .view1 {
+
+
+  }
 }
