@@ -423,4 +423,22 @@ header {
 #menu li {
   margin-bottom: 0;
 }
+
+.container1::before {
+  content: ""; /* pour enlever le contenu textuel de l'élément */
+  position: absolute; /* permet de ne pas dépendre des autres éléments et de le placer librement */
+  background-image: url(../img/topo1.svg); /* on ajoute cette image en background de l'élement before */
+  background-repeat: no-repeat; /* comme l'image est plus petite que l'espace disponible on évite le repeat du motif */
+  width: 69.7rem;
+  height: 64.9rem;
+  right: -38.7rem;
+  left: auto;
+  top: -13.7rem;
+  clip-path: none; /* permet de découper le motif topo1 sans toucher à topo2. clip-path: inset(haut droite bas gauche)  */
+}
+
+.container1 {
+  overflow-y: clip;
+}
+
 }
