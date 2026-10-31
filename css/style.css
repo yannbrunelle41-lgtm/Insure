@@ -12,11 +12,8 @@ body {
   overflow-x: clip;
 }
 
-.networklink {
-  display: flex;
-  justify-content: center;
-  gap: 1.6rem;
-}
+
+
 
 /* karla-regular - latin */
 @font-face {
@@ -45,7 +42,16 @@ body {
   src: url('../fonts/dm-serif-display-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+.networklink {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
 
+.networklink a {
+  width: 2.4rem;
+  height: 2.4rem;
+}
 
 h3 {
   font-family: 'DM Serif Display';
@@ -278,6 +284,7 @@ header {
   padding-block: 7.2rem;
   overflow-y: clip;
   margin-bottom: 14rem;
+  margin-inline: 2.4rem;
 }
 
 .container3 h2 {
@@ -346,7 +353,7 @@ footer {
   font-family: 'Karla';
   letter-spacing: 0.15rem;
   font-size: 1.3rem;
-  
+
 }
 
 .nav-footer ul {
@@ -380,9 +387,13 @@ footer::before {
 }
 
 @media (min-width: 1024px) {
-  
+
   .burger-menu {
     display: none;
+  }
+
+  header {
+    padding-inline: 16.5rem;
   }
 
   #menu {
@@ -390,26 +401,28 @@ footer::before {
     position: relative;
     width: auto;
     height: auto;
-    background-color: transparent; 
+    background-color: transparent;
     display: flex;
     padding: 0;
     margin: 0;
     gap: 2.5rem;
     align-items: center;
     top: 0;
-  
+
   }
 
   #menu a {
     color: #837D88;
     padding-block: 0;
     line-height: normal;
+    font-size: 1.3rem;
+    font-weight: 700;
   }
 
   #menu > *, #menu li:nth-child(3) {
     margin: 0;
     padding: 0;
-  
+
   }
   #menu .cta-viewplans {
     border-color: #2C2830;
@@ -427,7 +440,9 @@ footer::before {
 
   .container1::before, .container1::after {
     display: none;/* permet de découper le motif topo1 sans toucher à topo2. clip-path: inset(haut droite bas gauche)  */
+    background-image: none;
   }
+
 
   .container1 {
     position: relative;
@@ -437,13 +452,25 @@ footer::before {
     padding: 0;
   }
 
+  .container1 .view1, .container3 .view1 {
+    display: inline-block;
+    font-size: 1.3rem;
+    letter-spacing: 0.15rem;
+    font-weight: 700;
+  }
+
+  .family, .container1 {
+    top: 10.5rem;
+  }
+
+
   .hero {
     position: relative;
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
+    align-items: flex-start;
     background-color: #2D2641;
-    padding-inline: 16.5rem;
+    padding-inline: 11.46vw;  /* Pour avoir une marge qui évolue avec la taile d'écran, je mets la valeur en vw. Je voulais une marge de 165px à 1440px de largeur d'écran donc 165/1440 * 100 = 11,46 */
   }
 
   .family-picture {
@@ -454,7 +481,6 @@ footer::before {
     position: relative;
     flex-basis: 50%;
     margin-left: 1.5rem;
-    top: 15rem;
   }
 
   .hero::before {
@@ -466,7 +492,7 @@ footer::before {
     height: 64.9rem;
     right: -26.2rem;
     top: -13.5rem;
-    background-size: contain;  
+    background-size: contain;
   }
 
   .hero::after {
@@ -478,7 +504,7 @@ footer::before {
     height: 64.9rem;
     left: -50.3rem;
     bottom: -46.3rem;
-    background-size: contain; 
+    background-size: contain;
   }
 
   .container1::before {
@@ -499,10 +525,10 @@ footer::before {
     font-size: 7.2rem;
     line-height: 6.4rem;
     letter-spacing: -0.1rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 3.2rem;
   }
 
-  .container1 p {
+  .container1 .main-text {
     margin-bottom: 2.4rem;
   }
 
@@ -522,8 +548,12 @@ footer::before {
   .container2 ul {
     display: flex;
     flex-direction: row;
-    text-align: left;    
+    text-align: left;
     gap: 3rem;
+  }
+
+  .container2 li {
+    flex: 1;
   }
 
   .container2::before {
@@ -543,6 +573,7 @@ footer::before {
 
   .titre1 {
     margin-bottom: 9.6rem;
+    margin-top: 0;
   }
 
   .container3::before {
@@ -571,8 +602,60 @@ footer::before {
     margin-bottom: 0;
   }
 
-  .container3 .view1 {
-
+  .top-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 0;
+    margin-inline: 0;
 
   }
+
+  footer {
+    padding-top: 6.4rem;
+    padding-inline: 16.5rem;
+  }
+
+  .nav-footer {
+    position: relative;
+    flex-direction: row;
+    text-align: left;
+    z-index: 2;
+    gap: 3rem;
+  }
+
+  footer::before {
+    width: 69.7rem;
+    height: 64.9rem;
+    background-size: contain;
+    top: -41.9rem;
+    left: -17rem;
+  }
+
+  .nav-footer div {
+    flex: 1; /* permet au div d'avoir la même part de largeur disponible */
+  }
+
+  #menu a:hover {
+    color: #2C2830;
+  }
+
+  #menu .cta-viewplans:hover {
+    background-color: #2C2830;
+    color: #FFFFFF;
+  }
+
+  .container1 .view1:hover, .container3 .view1:hover {
+    background-color: #FFFFFF;
+    color: #2C2830;
+  }
+
+  .nav-footer a:hover {
+    text-decoration: underline;
+  }
+
+  .networklink img:hover {
+    filter: brightness(0);
+  }
+
+
 }
