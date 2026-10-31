@@ -55,9 +55,9 @@ h3 {
 
 
 h1, .titre1{
-    font-family: 'DM Serif Display';
-    font-weight: 400;
-    font-size: 4.8rem;
+  font-family: 'DM Serif Display';
+  font-weight: 400;
+  font-size: 4.8rem;
 }
 
 h1 {
@@ -96,8 +96,8 @@ ul{
 
 main {
   overflow-x: clip; /*on dit à "main" qu'il doit découper ce qui dépasse visuellement pour éviter de scroll horizontalement
-                    -x: sur l'axe x donc gauche et droite
-                    clip : coupe l'affichage à la limite de main */
+  -x: sur l'axe x donc gauche et droite
+  clip : coupe l'affichage à la limite de main */
 }
 
 .main-text {
@@ -130,11 +130,9 @@ main {
 }
 
 .view1 {
-  display: block;
   border: #FFFFFF solid 0.15rem;
   text-decoration: none;
   color: #FFFFFF;
-
   padding-inline: 2.85rem;
   padding-top: 1.3rem;
   padding-bottom: 1.2rem;
@@ -364,8 +362,8 @@ footer {
 }
 
 .nav-footer a {
-   color: #2D2641;
-   text-decoration: none;
+  color: #2D2641;
+  text-decoration: none;
 }
 
 footer::before {
@@ -382,121 +380,146 @@ footer::before {
 
 @media (min-width: 1024px) {
   
-.burger-menu {
-  display: none;
-}
+  .burger-menu {
+    display: none;
+  }
 
-#menu {
-  transform: translateX(0%);
-  position: relative;
-  width: auto;
-  height: auto;
-  background-color: transparent; 
-  display: flex;
-  padding: 0;
-  margin: 0;
-  gap: 2.5rem;
-  align-items: center;
-  top: 0;
+  #menu {
+    transform: translateX(0%);
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: transparent; 
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 2.5rem;
+    align-items: center;
+    top: 0;
   
-}
+  }
 
-#menu a {
-  color: #837D88;
-  padding-block: 0;
-  line-height: normal;
-}
+  #menu a {
+    color: #837D88;
+    padding-block: 0;
+    line-height: normal;
+  }
 
-#menu > *, #menu li:nth-child(3) {
-  margin: 0;
-  padding: 0;
+  #menu > *, #menu li:nth-child(3) {
+    margin: 0;
+    padding: 0;
   
-}
-#menu .cta-viewplans {
-  border-color: #2C2830;
-  padding-inline: 2.85rem;
-  padding-block: 1.3rem;
-  letter-spacing: 0.15rem;
-}
-header {
-  height: 8rem;
-}
+  }
+  #menu .cta-viewplans {
+    border-color: #2C2830;
+    padding-inline: 2.85rem;
+    padding-block: 1.3rem;
+    letter-spacing: 0.15rem;
+  }
+  header {
+    height: 8rem;
+  }
 
-#menu li {
-  margin-bottom: 0;
-}
+  #menu li {
+    margin-bottom: 0;
+  }
 
-.container1::before {
-  display: none;/* permet de découper le motif topo1 sans toucher à topo2. clip-path: inset(haut droite bas gauche)  */
-}
+  .container1::before, .container1::after {
+    display: none;/* permet de découper le motif topo1 sans toucher à topo2. clip-path: inset(haut droite bas gauche)  */
+  }
 
-.container1 {
-  position: relative;
-  text-align: left;
-  background-color: transparent;
-  flex-basis: 50%;
-  padding: 0;
-}
+  .container1 {
+    position: relative;
+    text-align: left;
+    background-color: transparent;
+    flex-basis: 50%;
+    padding: 0;
+  }
 
-.hero {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-start;
-  background-color: #2D2641;
-  padding-inline: 16.5rem;
-  padding-top: 10.5rem;
-}
+  .hero {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: #2D2641;
+    padding-inline: 16.5rem;
+  }
 
-.family-picture {
-  margin-inline: 0;
-}
+  .family-picture {
+    margin-inline: 0;
+  }
 
-.hero .family {
-  position: relative;
-  flex-basis: 50%;
-  margin-left: 1.5rem;
-}
+  .hero .family {
+    position: relative;
+    flex-basis: 50%;
+    margin-left: 1.5rem;
+    top: 15rem;
+  }
 
-.hero::before {
-  content: ""; /* pour enlever le contenu textuel de l'élément */
-  position: absolute; /* permet de ne pas dépendre des autres éléments et de le placer librement */
-  background-image: url(../img/topo1.svg); /* on ajoute cette image en background de l'élement before */
-  background-repeat: no-repeat; /* comme l'image est plus petite que l'espace disponible on évite le repeat du motif */
-  width: 69.7rem;
-  height: 64.9rem;
-  right: -38.7rem;
-  
-}
+  .hero::before {
+    content: ""; /* pour enlever le contenu textuel de l'élément */
+    position: absolute; /* permet de ne pas dépendre des autres éléments et de le placer librement */
+    background-image: url(../img/topo1.svg); /* on ajoute cette image en background de l'élement before */
+    background-repeat: no-repeat; /* comme l'image est plus petite que l'espace disponible on évite le repeat du motif */
+    width: 69.7rem;
+    height: 64.9rem;
+    right: -26.2rem;
+    top: -13.5rem;
+    background-size: contain;  
+  }
 
-.container1::before {
-  content: "";
-  display: block;
-  position: relative;
-  background-color: #979797;
-  width: 15rem;
-  height: 0.1rem;
-  clip-path: none;
-  top: 0;
-  left:0;
-  margin-bottom: 6.3rem;
+  .hero::after {
+    content: ""; /* pour enlever le contenu textuel de l'élément */
+    position: absolute; /* permet de ne pas dépendre des autres éléments et de le placer librement */
+    background-image: url(../img/topo2.svg); /* on ajoute cette image en background de l'élement before */
+    background-repeat: no-repeat; /* comme l'image est plus petite que l'espace disponible on évite le repeat du motif */
+    width: 69.7rem;
+    height: 64.9rem;
+    left: -50.3rem;
+    bottom: -46.3rem;
+    background-size: contain; 
+  }
 
-}
+  .container1::before {
+    content: "";
+    display: block;
+    position: relative;
+    background-color: #979797;
+    width: 15rem;
+    height: 0.1rem;
+    clip-path: none;
+    top: 0;
+    left:0;
+    margin-bottom: 6.3rem;
 
-.container1 h1 {
-  font-size: 7.2rem;
-  line-height: 6.4rem;
-  letter-spacing: -0.1rem;
-  margin-bottom: 1.6rem;
-}
+  }
 
-.container1 p {
-  margin-bottom: 2.4rem;
-}
+  .container1 h1 {
+    font-size: 7.2rem;
+    line-height: 6.4rem;
+    letter-spacing: -0.1rem;
+    margin-bottom: 1.6rem;
+  }
 
-.view1 {
-  width: 14.6rem;
-  height: 4rem;
-  padding-inline: 2.85rem;
-}
+  .container1 p {
+    margin-bottom: 2.4rem;
+  }
+
+  main {
+    clip-path: inset(0 0 0 0);
+  }
+
+  .container2 {
+    margin-top: 30.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container2 ul {
+    display: flex;
+    flex-direction: row;
+    text-align: left;    
+  }
 
 }
