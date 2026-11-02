@@ -397,6 +397,10 @@ footer::before {
     padding-inline: 16.5rem;
   }
 
+  #menu::after {
+    display: none;
+  }
+
   #menu {
     transform: translateX(0%);
     position: relative;
@@ -409,8 +413,9 @@ footer::before {
     gap: 2.5rem;
     align-items: center;
     top: 0;
-
+    overflow: visible;
   }
+
 
   #menu a {
     color: #837D88;
