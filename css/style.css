@@ -4,6 +4,7 @@ html {
 }
 
 body {
+  position: relative;
   font-size: 16px;
   text-align: center;
   font-family: 'Karla';
@@ -40,6 +41,30 @@ body {
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/dm-serif-display-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+.hidden-nav {
+  position: absolute;
+  top: -20rem;
+  gap: 2.4rem;
+  display: flex;
+  align-self: flex-start;
+  margin-block: 2rem;
+}
+
+.hidden-nav a {
+  display: block;
+  text-decoration: none;
+  padding-inline: 2rem;
+  color: #FFFFFF;
+  background-color: #2D2641;
+  border-radius: 3rem;
+  padding-block: 1rem;  
+}
+
+.hidden-nav:focus-within {
+  position: relative;
+  top: 0;
 }
 
 .networklink {

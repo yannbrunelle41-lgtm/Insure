@@ -40,10 +40,16 @@
 
 
   <body>
+    <nav class="hidden-nav" role="navigation" aria-label="skip menu">
+      <a href="index.html">Home page</a>
+      <a href="#main">Main content</a>
+      <a href="#services">Services</a>
+      <a href="#network">Network links</a>
+    </nav>
     <header role="banner">
 
       <a href="index.html">
-        <img src="img/logoinsure.svg" alt="logo Insure">
+        <img id="home-page" src="img/logoinsure.svg" alt="Insure's logo. Home page">
       </a>
 
       <button
@@ -64,7 +70,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main">
       <div class="hero">
         <div class="family">
           <img class="family-picture" src="img/mainpic.jpg" alt="Photo d'une famille qui marche">
@@ -78,8 +84,9 @@
 
         </section>
       </div>
+      
 
-      <section class="container2">
+      <section id="services" class="container2">
         <h2 class="titre1">We're different</h2>
 
         <ul>
@@ -118,20 +125,20 @@
       <footer role="contentinfo">
         <section class="top-footer">
           <a class="link-accueil" href="index.html">
-            <img class="icone" src="img/logoinsure.svg" alt="Insure Accueil">
+            <img  class="icone" src="img/logoinsure.svg" alt="Insure's logo. Home page">
           </a>
-          <ul class="networklink">
+          <ul id="network" class="networklink">
             <li>
-              <a href="https://www.facebook.com" target="_blank"><img src="img/facebook.svg" alt="facebook"></a>
+              <a href="https://www.facebook.com" target="_blank"><img src="img/facebook.svg" alt="Insure's Facebook opens in a new tab"></a>
             </li>
             <li>
-              <a href="https://x.com/?lang=fr" target="_blank"><img src="img/twitter.svg" alt="twitter"></a>
+              <a href="https://x.com/?lang=fr" target="_blank"><img src="img/twitter.svg" alt="Insure's Twitter opens in a new tab"></a>
             </li>
             <li>
-              <a href="https://fr.pinterest.com" target="_blank"><img src="img/pinterest.svg" alt="pinterest"></a>
+              <a href="https://fr.pinterest.com" target="_blank"><img src="img/pinterest.svg" alt="Insure's Pinterest opens in a new tab"></a>
             </li>
             <li>
-              <a href="https://www.instagram.com/?hl=fr" target="_blank"><img src="img/insta.svg" alt="instagram"></a>
+              <a href="https://www.instagram.com/?hl=fr" target="_blank"><img src="img/insta.svg" alt="Insure's Instagram opens in a new tab"></a>
             </li>
           </ul>
         </section>
